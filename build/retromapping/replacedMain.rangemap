@@ -1,0 +1,363 @@
+Symbol range map extraction starting
+Processing 6 files
+processing tbsc/tbscfps/FPSRenderEventHandler.java
+@|tbsc/tbscfps/FPSRenderEventHandler.java|8|20|tbsc.tbscfps|package|tbsc.tbscfps|(file)
+Class Start: tbsc.tbscfps.FPSRenderEventHandler
+   @|tbsc/tbscfps/FPSRenderEventHandler.java|557|566|Minecraft|class|net.minecraft.client.Minecraft
+   @|tbsc/tbscfps/FPSRenderEventHandler.java|567|569|mc|field|tbsc.tbscfps.FPSRenderEventHandler|mc|
+   @|tbsc/tbscfps/FPSRenderEventHandler.java|572|581|Minecraft|class|net.minecraft.client.Minecraft
+   @|tbsc/tbscfps/FPSRenderEventHandler.java|582|594|getMinecraft|method|net.minecraft.client.Minecraft|getMinecraft|()Lnet/minecraft/client/Minecraft;
+   Method Start: onConfigChanged(Lnet/minecraftforge/fml/client/event/ConfigChangedEvent$OnConfigChangedEvent;)V
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|635|650|onConfigChanged|method|tbsc.tbscfps.FPSRenderEventHandler|onConfigChanged|(Lnet/minecraftforge/fml/client/event/ConfigChangedEvent$OnConfigChangedEvent;)V
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|651|690|ConfigChangedEvent.OnConfigChangedEvent|class|net.minecraftforge.fml.client.event.ConfigChangedEvent.OnConfigChangedEvent
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|691|700|eventArgs|param|tbsc.tbscfps.FPSRenderEventHandler|onConfigChanged|(Lnet/minecraftforge/fml/client/event/ConfigChangedEvent$OnConfigChangedEvent;)V|eventArgs|0
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|716|725|eventArgs|param|tbsc.tbscfps.FPSRenderEventHandler|onConfigChanged|(Lnet/minecraftforge/fml/client/event/ConfigChangedEvent$OnConfigChangedEvent;)V|eventArgs|0
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|726|731|modID|field|net.minecraftforge.fml.client.event.ConfigChangedEvent|modID
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|732|738|equals|method|java.lang.String|equals|(Ljava/lang/Object;)Z
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|739|746|TbscFPS|class|tbsc.tbscfps.TbscFPS
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|747|752|MODID|field|tbsc.tbscfps.TbscFPS|MODID
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|769|776|TbscFPS|class|tbsc.tbscfps.TbscFPS
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|777|787|syncConfig|method|tbsc.tbscfps.TbscFPS|syncConfig|()V
+   Method End: onConfigChanged(Lnet/minecraftforge/fml/client/event/ConfigChangedEvent$OnConfigChangedEvent;)V
+   Method Start: onRenderGameOverlay(Lnet/minecraftforge/client/event/RenderGameOverlayEvent;)V
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|905|924|onRenderGameOverlay|method|tbsc.tbscfps.FPSRenderEventHandler|onRenderGameOverlay|(Lnet/minecraftforge/client/event/RenderGameOverlayEvent;)V
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|925|947|RenderGameOverlayEvent|class|net.minecraftforge.client.event.RenderGameOverlayEvent
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|948|953|event|param|tbsc.tbscfps.FPSRenderEventHandler|onRenderGameOverlay|(Lnet/minecraftforge/client/event/RenderGameOverlayEvent;)V|event|0
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|969|974|event|param|tbsc.tbscfps.FPSRenderEventHandler|onRenderGameOverlay|(Lnet/minecraftforge/client/event/RenderGameOverlayEvent;)V|event|0
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|975|987|isCancelable|method|net.minecraftforge.fml.common.eventhandler.Event|isCancelable|()Z
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|993|998|event|param|tbsc.tbscfps.FPSRenderEventHandler|onRenderGameOverlay|(Lnet/minecraftforge/client/event/RenderGameOverlayEvent;)V|event|0
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|999|1003|type|field|net.minecraftforge.client.event.RenderGameOverlayEvent|type
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|1007|1041|RenderGameOverlayEvent.ElementType|class|net.minecraftforge.client.event.RenderGameOverlayEvent.ElementType
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|1042|1046|TEXT|field|net.minecraftforge.client.event.RenderGameOverlayEvent.ElementType|TEXT
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|1051|1058|TbscFPS|class|tbsc.tbscfps.TbscFPS
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|1059|1071|shouldRender|field|tbsc.tbscfps.TbscFPS|shouldRender
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|1175|1180|event|param|tbsc.tbscfps.FPSRenderEventHandler|onRenderGameOverlay|(Lnet/minecraftforge/client/event/RenderGameOverlayEvent;)V|event|0
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|1181|1191|resolution|field|net.minecraftforge.client.event.RenderGameOverlayEvent|resolution
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|1192|1206|getScaledWidth|method|net.minecraft.client.gui.ScaledResolution|getScaledWidth|()I
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|1231|1236|event|param|tbsc.tbscfps.FPSRenderEventHandler|onRenderGameOverlay|(Lnet/minecraftforge/client/event/RenderGameOverlayEvent;)V|event|0
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|1237|1247|resolution|field|net.minecraftforge.client.event.RenderGameOverlayEvent|resolution
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|1248|1263|getScaledHeight|method|net.minecraft.client.gui.ScaledResolution|getScaledHeight|()I
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|1479|1483|GL11|class|org.lwjgl.opengl.GL11
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|1484|1493|glColor4f|method|org.lwjgl.opengl.GL11|glColor4f|(FFFF)V
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|1527|1531|GL11|class|org.lwjgl.opengl.GL11
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|1532|1541|glDisable|method|org.lwjgl.opengl.GL11|glDisable|(I)V
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|1542|1546|GL11|class|org.lwjgl.opengl.GL11
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|1547|1558|GL_LIGHTING|field|org.lwjgl.opengl.GL11|GL_LIGHTING
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|1585|1594|Minecraft|class|net.minecraft.client.Minecraft
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|1595|1606|getDebugFPS|method|net.minecraft.client.Minecraft|getDebugFPS|()I
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|1622|1629|TbscFPS|class|tbsc.tbscfps.TbscFPS
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|1630|1633|pos|field|tbsc.tbscfps.TbscFPS|pos
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|1637|1652|CounterPosition|class|tbsc.tbscfps.util.CounterPosition
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|1653|1661|TOP_LEFT|field|tbsc.tbscfps.util.CounterPosition|TOP_LEFT
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|1682|1692|drawString|method|net.minecraft.client.gui.Gui|drawString|(Lnet/minecraft/client/gui/FontRenderer;Ljava/lang/String;III)V
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|1693|1695|mc|field|tbsc.tbscfps.FPSRenderEventHandler|mc
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|1696|1711|fontRendererObj|field|net.minecraft.client.Minecraft|fontRendererObj
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|1713|1719|String|class|java.lang.String
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|1720|1727|valueOf|method|java.lang.String|valueOf|(I)Ljava/lang/String;
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|1811|1818|TbscFPS|class|tbsc.tbscfps.TbscFPS
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|1819|1822|pos|field|tbsc.tbscfps.TbscFPS|pos
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|1826|1841|CounterPosition|class|tbsc.tbscfps.util.CounterPosition
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|1842|1852|TOP_MIDDLE|field|tbsc.tbscfps.util.CounterPosition|TOP_MIDDLE
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|1873|1883|drawString|method|net.minecraft.client.gui.Gui|drawString|(Lnet/minecraft/client/gui/FontRenderer;Ljava/lang/String;III)V
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|1884|1886|mc|field|tbsc.tbscfps.FPSRenderEventHandler|mc
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|1887|1902|fontRendererObj|field|net.minecraft.client.Minecraft|fontRendererObj
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|1904|1910|String|class|java.lang.String
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|1911|1918|valueOf|method|java.lang.String|valueOf|(I)Ljava/lang/String;
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|2004|2011|TbscFPS|class|tbsc.tbscfps.TbscFPS
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|2012|2015|pos|field|tbsc.tbscfps.TbscFPS|pos
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|2019|2034|CounterPosition|class|tbsc.tbscfps.util.CounterPosition
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|2035|2044|TOP_RIGHT|field|tbsc.tbscfps.util.CounterPosition|TOP_RIGHT
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|2065|2075|drawString|method|net.minecraft.client.gui.Gui|drawString|(Lnet/minecraft/client/gui/FontRenderer;Ljava/lang/String;III)V
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|2076|2078|mc|field|tbsc.tbscfps.FPSRenderEventHandler|mc
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|2079|2094|fontRendererObj|field|net.minecraft.client.Minecraft|fontRendererObj
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|2096|2102|String|class|java.lang.String
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|2103|2110|valueOf|method|java.lang.String|valueOf|(I)Ljava/lang/String;
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|2195|2202|TbscFPS|class|tbsc.tbscfps.TbscFPS
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|2203|2206|pos|field|tbsc.tbscfps.TbscFPS|pos
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|2210|2225|CounterPosition|class|tbsc.tbscfps.util.CounterPosition
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|2226|2238|CENTER_RIGHT|field|tbsc.tbscfps.util.CounterPosition|CENTER_RIGHT
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|2259|2269|drawString|method|net.minecraft.client.gui.Gui|drawString|(Lnet/minecraft/client/gui/FontRenderer;Ljava/lang/String;III)V
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|2270|2272|mc|field|tbsc.tbscfps.FPSRenderEventHandler|mc
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|2273|2288|fontRendererObj|field|net.minecraft.client.Minecraft|fontRendererObj
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|2290|2296|String|class|java.lang.String
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|2297|2304|valueOf|method|java.lang.String|valueOf|(I)Ljava/lang/String;
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|2392|2399|TbscFPS|class|tbsc.tbscfps.TbscFPS
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|2400|2403|pos|field|tbsc.tbscfps.TbscFPS|pos
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|2407|2422|CounterPosition|class|tbsc.tbscfps.util.CounterPosition
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|2423|2435|BOTTOM_RIGHT|field|tbsc.tbscfps.util.CounterPosition|BOTTOM_RIGHT
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|2456|2466|drawString|method|net.minecraft.client.gui.Gui|drawString|(Lnet/minecraft/client/gui/FontRenderer;Ljava/lang/String;III)V
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|2467|2469|mc|field|tbsc.tbscfps.FPSRenderEventHandler|mc
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|2470|2485|fontRendererObj|field|net.minecraft.client.Minecraft|fontRendererObj
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|2487|2493|String|class|java.lang.String
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|2494|2501|valueOf|method|java.lang.String|valueOf|(I)Ljava/lang/String;
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|2587|2594|TbscFPS|class|tbsc.tbscfps.TbscFPS
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|2595|2598|pos|field|tbsc.tbscfps.TbscFPS|pos
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|2602|2617|CounterPosition|class|tbsc.tbscfps.util.CounterPosition
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|2618|2631|BOTTOM_MIDDLE|field|tbsc.tbscfps.util.CounterPosition|BOTTOM_MIDDLE
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|2652|2662|drawString|method|net.minecraft.client.gui.Gui|drawString|(Lnet/minecraft/client/gui/FontRenderer;Ljava/lang/String;III)V
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|2663|2665|mc|field|tbsc.tbscfps.FPSRenderEventHandler|mc
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|2666|2681|fontRendererObj|field|net.minecraft.client.Minecraft|fontRendererObj
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|2683|2689|String|class|java.lang.String
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|2690|2697|valueOf|method|java.lang.String|valueOf|(I)Ljava/lang/String;
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|2784|2791|TbscFPS|class|tbsc.tbscfps.TbscFPS
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|2792|2795|pos|field|tbsc.tbscfps.TbscFPS|pos
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|2799|2814|CounterPosition|class|tbsc.tbscfps.util.CounterPosition
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|2815|2826|BOTTOM_LEFT|field|tbsc.tbscfps.util.CounterPosition|BOTTOM_LEFT
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|2847|2857|drawString|method|net.minecraft.client.gui.Gui|drawString|(Lnet/minecraft/client/gui/FontRenderer;Ljava/lang/String;III)V
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|2858|2860|mc|field|tbsc.tbscfps.FPSRenderEventHandler|mc
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|2861|2876|fontRendererObj|field|net.minecraft.client.Minecraft|fontRendererObj
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|2878|2884|String|class|java.lang.String
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|2885|2892|valueOf|method|java.lang.String|valueOf|(I)Ljava/lang/String;
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|2977|2984|TbscFPS|class|tbsc.tbscfps.TbscFPS
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|2985|2988|pos|field|tbsc.tbscfps.TbscFPS|pos
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|2992|3007|CounterPosition|class|tbsc.tbscfps.util.CounterPosition
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|3008|3019|CENTER_LEFT|field|tbsc.tbscfps.util.CounterPosition|CENTER_LEFT
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|3040|3050|drawString|method|net.minecraft.client.gui.Gui|drawString|(Lnet/minecraft/client/gui/FontRenderer;Ljava/lang/String;III)V
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|3051|3053|mc|field|tbsc.tbscfps.FPSRenderEventHandler|mc
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|3054|3069|fontRendererObj|field|net.minecraft.client.Minecraft|fontRendererObj
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|3071|3077|String|class|java.lang.String
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|3078|3085|valueOf|method|java.lang.String|valueOf|(I)Ljava/lang/String;
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|3173|3183|drawString|method|net.minecraft.client.gui.Gui|drawString|(Lnet/minecraft/client/gui/FontRenderer;Ljava/lang/String;III)V
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|3184|3186|mc|field|tbsc.tbscfps.FPSRenderEventHandler|mc
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|3187|3202|fontRendererObj|field|net.minecraft.client.Minecraft|fontRendererObj
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|3204|3210|String|class|java.lang.String
+      @|tbsc/tbscfps/FPSRenderEventHandler.java|3211|3218|valueOf|method|java.lang.String|valueOf|(Ljava/lang/Object;)Ljava/lang/String;
+   Method End: onRenderGameOverlay(Lnet/minecraftforge/client/event/RenderGameOverlayEvent;)V
+Class End  : tbsc.tbscfps.FPSRenderEventHandler
+endProcessing tbsc/tbscfps/FPSRenderEventHandler.java
+
+processing tbsc/tbscfps/TbscFPS.java
+@|tbsc/tbscfps/TbscFPS.java|8|20|tbsc.tbscfps|package|tbsc.tbscfps|(file)
+Class Start: tbsc.tbscfps.TbscFPS
+   @|tbsc/tbscfps/TbscFPS.java|1097|1103|String|class|java.lang.String
+   @|tbsc/tbscfps/TbscFPS.java|1104|1109|MODID|field|tbsc.tbscfps.TbscFPS|MODID|
+   @|tbsc/tbscfps/TbscFPS.java|1147|1153|String|class|java.lang.String
+   @|tbsc/tbscfps/TbscFPS.java|1154|1161|VERSION|field|tbsc.tbscfps.TbscFPS|VERSION|
+   @|tbsc/tbscfps/TbscFPS.java|1195|1201|String|class|java.lang.String
+   @|tbsc/tbscfps/TbscFPS.java|1202|1213|GUI_FACTORY|field|tbsc.tbscfps.TbscFPS|GUI_FACTORY|
+   @|tbsc/tbscfps/TbscFPS.java|1278|1288|KeyBinding|class|net.minecraft.client.settings.KeyBinding
+   @|tbsc/tbscfps/TbscFPS.java|1289|1298|keyToggle|field|tbsc.tbscfps.TbscFPS|keyToggle|
+   @|tbsc/tbscfps/TbscFPS.java|1318|1327|Minecraft|class|net.minecraft.client.Minecraft
+   @|tbsc/tbscfps/TbscFPS.java|1328|1330|mc|field|tbsc.tbscfps.TbscFPS|mc|
+   @|tbsc/tbscfps/TbscFPS.java|1350|1363|Configuration|class|net.minecraftforge.common.config.Configuration
+   @|tbsc/tbscfps/TbscFPS.java|1364|1370|config|field|tbsc.tbscfps.TbscFPS|config|
+   @|tbsc/tbscfps/TbscFPS.java|1391|1406|CounterPosition|class|tbsc.tbscfps.util.CounterPosition
+   @|tbsc/tbscfps/TbscFPS.java|1407|1410|pos|field|tbsc.tbscfps.TbscFPS|pos|
+   @|tbsc/tbscfps/TbscFPS.java|1413|1428|CounterPosition|class|tbsc.tbscfps.util.CounterPosition
+   @|tbsc/tbscfps/TbscFPS.java|1429|1437|TOP_LEFT|field|tbsc.tbscfps.util.CounterPosition|TOP_LEFT
+   Method Start: preInit(Lnet/minecraftforge/fml/common/event/FMLPreInitializationEvent;)V
+      @|tbsc/tbscfps/TbscFPS.java|1478|1485|preInit|method|tbsc.tbscfps.TbscFPS|preInit|(Lnet/minecraftforge/fml/common/event/FMLPreInitializationEvent;)V
+      @|tbsc/tbscfps/TbscFPS.java|1486|1511|FMLPreInitializationEvent|class|net.minecraftforge.fml.common.event.FMLPreInitializationEvent
+      @|tbsc/tbscfps/TbscFPS.java|1512|1517|event|param|tbsc.tbscfps.TbscFPS|preInit|(Lnet/minecraftforge/fml/common/event/FMLPreInitializationEvent;)V|event|0
+      @|tbsc/tbscfps/TbscFPS.java|1533|1538|event|param|tbsc.tbscfps.TbscFPS|preInit|(Lnet/minecraftforge/fml/common/event/FMLPreInitializationEvent;)V|event|0
+      @|tbsc/tbscfps/TbscFPS.java|1539|1546|getSide|method|net.minecraftforge.fml.common.event.FMLStateEvent|getSide|()Lnet/minecraftforge/fml/relauncher/Side;
+      @|tbsc/tbscfps/TbscFPS.java|1552|1556|Side|class|net.minecraftforge.fml.relauncher.Side
+      @|tbsc/tbscfps/TbscFPS.java|1557|1563|SERVER|field|net.minecraftforge.fml.relauncher.Side|SERVER
+      @|tbsc/tbscfps/TbscFPS.java|1579|1585|FMLLog|class|net.minecraftforge.fml.common.FMLLog
+      @|tbsc/tbscfps/TbscFPS.java|1586|1596|bigWarning|method|net.minecraftforge.fml.common.FMLLog|bigWarning|(Ljava/lang/String;[Ljava/lang/Object;)V
+      @|tbsc/tbscfps/TbscFPS.java|1670|1676|FMLLog|class|net.minecraftforge.fml.common.FMLLog
+      @|tbsc/tbscfps/TbscFPS.java|1677|1687|bigWarning|method|net.minecraftforge.fml.common.FMLLog|bigWarning|(Ljava/lang/String;[Ljava/lang/Object;)V
+      @|tbsc/tbscfps/TbscFPS.java|1789|1791|mc|field|tbsc.tbscfps.TbscFPS|mc
+      @|tbsc/tbscfps/TbscFPS.java|1794|1803|Minecraft|class|net.minecraft.client.Minecraft
+      @|tbsc/tbscfps/TbscFPS.java|1804|1816|getMinecraft|method|net.minecraft.client.Minecraft|getMinecraft|()Lnet/minecraft/client/Minecraft;
+      @|tbsc/tbscfps/TbscFPS.java|1828|1837|keyToggle|field|tbsc.tbscfps.TbscFPS|keyToggle
+      @|tbsc/tbscfps/TbscFPS.java|1844|1854|KeyBinding|class|net.minecraft.client.settings.KeyBinding
+      @|tbsc/tbscfps/TbscFPS.java|1877|1885|Keyboard|class|org.lwjgl.input.Keyboard
+      @|tbsc/tbscfps/TbscFPS.java|1886|1891|KEY_G|field|org.lwjgl.input.Keyboard|KEY_G
+      @|tbsc/tbscfps/TbscFPS.java|1913|1927|ClientRegistry|class|net.minecraftforge.fml.client.registry.ClientRegistry
+      @|tbsc/tbscfps/TbscFPS.java|1928|1946|registerKeyBinding|method|net.minecraftforge.fml.client.registry.ClientRegistry|registerKeyBinding|(Lnet/minecraft/client/settings/KeyBinding;)V
+      @|tbsc/tbscfps/TbscFPS.java|1947|1956|keyToggle|field|tbsc.tbscfps.TbscFPS|keyToggle
+      @|tbsc/tbscfps/TbscFPS.java|1967|1973|config|field|tbsc.tbscfps.TbscFPS|config
+      @|tbsc/tbscfps/TbscFPS.java|1980|1993|Configuration|class|net.minecraftforge.common.config.Configuration
+      @|tbsc/tbscfps/TbscFPS.java|1994|1999|event|param|tbsc.tbscfps.TbscFPS|preInit|(Lnet/minecraftforge/fml/common/event/FMLPreInitializationEvent;)V|event|0
+      @|tbsc/tbscfps/TbscFPS.java|2000|2029|getSuggestedConfigurationFile|method|net.minecraftforge.fml.common.event.FMLPreInitializationEvent|getSuggestedConfigurationFile|()Ljava/io/File;
+      @|tbsc/tbscfps/TbscFPS.java|2042|2052|syncConfig|method|tbsc.tbscfps.TbscFPS|syncConfig|()V
+   Method End: preInit(Lnet/minecraftforge/fml/common/event/FMLPreInitializationEvent;)V
+   Method Start: postInit(Lnet/minecraftforge/fml/common/event/FMLPostInitializationEvent;)V
+      @|tbsc/tbscfps/TbscFPS.java|2101|2109|postInit|method|tbsc.tbscfps.TbscFPS|postInit|(Lnet/minecraftforge/fml/common/event/FMLPostInitializationEvent;)V
+      @|tbsc/tbscfps/TbscFPS.java|2110|2136|FMLPostInitializationEvent|class|net.minecraftforge.fml.common.event.FMLPostInitializationEvent
+      @|tbsc/tbscfps/TbscFPS.java|2137|2142|event|param|tbsc.tbscfps.TbscFPS|postInit|(Lnet/minecraftforge/fml/common/event/FMLPostInitializationEvent;)V|event|0
+      @|tbsc/tbscfps/TbscFPS.java|2154|2168|MinecraftForge|class|net.minecraftforge.common.MinecraftForge
+      @|tbsc/tbscfps/TbscFPS.java|2169|2178|EVENT_BUS|field|net.minecraftforge.common.MinecraftForge|EVENT_BUS
+      @|tbsc/tbscfps/TbscFPS.java|2179|2187|register|method|net.minecraftforge.fml.common.eventhandler.EventBus|register|(Ljava/lang/Object;)V
+      @|tbsc/tbscfps/TbscFPS.java|2192|2213|FPSRenderEventHandler|class|tbsc.tbscfps.FPSRenderEventHandler
+   Method End: postInit(Lnet/minecraftforge/fml/common/event/FMLPostInitializationEvent;)V
+   Method Start: syncConfig()V
+      @|tbsc/tbscfps/TbscFPS.java|2248|2258|syncConfig|method|tbsc.tbscfps.TbscFPS|syncConfig|()V
+      @|tbsc/tbscfps/TbscFPS.java|2316|2322|config|field|tbsc.tbscfps.TbscFPS|config
+      @|tbsc/tbscfps/TbscFPS.java|2323|2327|load|method|net.minecraftforge.common.config.Configuration|load|()V
+      @|tbsc/tbscfps/TbscFPS.java|2382|2390|Property|class|net.minecraftforge.common.config.Property
+      @|tbsc/tbscfps/TbscFPS.java|2404|2410|config|field|tbsc.tbscfps.TbscFPS|config
+      @|tbsc/tbscfps/TbscFPS.java|2411|2414|get|method|net.minecraftforge.common.config.Configuration|get|(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lnet/minecraftforge/common/config/Property;
+      @|tbsc/tbscfps/TbscFPS.java|2415|2428|Configuration|class|net.minecraftforge.common.config.Configuration
+      @|tbsc/tbscfps/TbscFPS.java|2429|2445|CATEGORY_GENERAL|field|net.minecraftforge.common.config.Configuration|CATEGORY_GENERAL
+      @|tbsc/tbscfps/TbscFPS.java|2628|2634|String|class|java.lang.String
+      @|tbsc/tbscfps/TbscFPS.java|2658|2667|getString|method|net.minecraftforge.common.config.Property|getString|()Ljava/lang/String;
+      @|tbsc/tbscfps/TbscFPS.java|2683|2686|pos|field|tbsc.tbscfps.TbscFPS|pos
+      @|tbsc/tbscfps/TbscFPS.java|2689|2701|PositionUtil|class|tbsc.tbscfps.util.PositionUtil
+      @|tbsc/tbscfps/TbscFPS.java|2702|2712|toPosition|method|tbsc.tbscfps.util.PositionUtil|toPosition|(Ljava/lang/String;)Ltbsc/tbscfps/util/CounterPosition;
+      @|tbsc/tbscfps/TbscFPS.java|2742|2751|Exception|class|java.lang.Exception
+      @|tbsc/tbscfps/TbscFPS.java|2854|2860|config|field|tbsc.tbscfps.TbscFPS|config
+      @|tbsc/tbscfps/TbscFPS.java|2861|2871|hasChanged|method|net.minecraftforge.common.config.Configuration|hasChanged|()Z
+      @|tbsc/tbscfps/TbscFPS.java|2875|2881|config|field|tbsc.tbscfps.TbscFPS|config
+      @|tbsc/tbscfps/TbscFPS.java|2882|2886|save|method|net.minecraftforge.common.config.Configuration|save|()V
+   Method End: syncConfig()V
+   Method Start: onConfigChanged(Lnet/minecraftforge/fml/client/event/ConfigChangedEvent$OnConfigChangedEvent;)V
+      @|tbsc/tbscfps/TbscFPS.java|2943|2958|onConfigChanged|method|tbsc.tbscfps.TbscFPS|onConfigChanged|(Lnet/minecraftforge/fml/client/event/ConfigChangedEvent$OnConfigChangedEvent;)V
+      @|tbsc/tbscfps/TbscFPS.java|2959|2998|ConfigChangedEvent.OnConfigChangedEvent|class|net.minecraftforge.fml.client.event.ConfigChangedEvent.OnConfigChangedEvent
+      @|tbsc/tbscfps/TbscFPS.java|2999|3004|event|param|tbsc.tbscfps.TbscFPS|onConfigChanged|(Lnet/minecraftforge/fml/client/event/ConfigChangedEvent$OnConfigChangedEvent;)V|event|0
+      @|tbsc/tbscfps/TbscFPS.java|3016|3026|syncConfig|method|tbsc.tbscfps.TbscFPS|syncConfig|()V
+   Method End: onConfigChanged(Lnet/minecraftforge/fml/client/event/ConfigChangedEvent$OnConfigChangedEvent;)V
+   @|tbsc/tbscfps/TbscFPS.java|3063|3075|shouldRender|field|tbsc.tbscfps.TbscFPS|shouldRender|
+   Method Start: onKeyPressed(Lnet/minecraftforge/fml/common/gameevent/InputEvent$KeyInputEvent;)V
+      @|tbsc/tbscfps/TbscFPS.java|3121|3133|onKeyPressed|method|tbsc.tbscfps.TbscFPS|onKeyPressed|(Lnet/minecraftforge/fml/common/gameevent/InputEvent$KeyInputEvent;)V
+      @|tbsc/tbscfps/TbscFPS.java|3134|3158|InputEvent.KeyInputEvent|class|net.minecraftforge.fml.common.gameevent.InputEvent.KeyInputEvent
+      @|tbsc/tbscfps/TbscFPS.java|3159|3164|event|param|tbsc.tbscfps.TbscFPS|onKeyPressed|(Lnet/minecraftforge/fml/common/gameevent/InputEvent$KeyInputEvent;)V|event|0
+      @|tbsc/tbscfps/TbscFPS.java|3180|3187|TbscFPS|class|tbsc.tbscfps.TbscFPS
+      @|tbsc/tbscfps/TbscFPS.java|3188|3197|keyToggle|field|tbsc.tbscfps.TbscFPS|keyToggle
+      @|tbsc/tbscfps/TbscFPS.java|3198|3207|isPressed|method|net.minecraft.client.settings.KeyBinding|isPressed|()Z
+      @|tbsc/tbscfps/TbscFPS.java|3225|3237|shouldRender|field|tbsc.tbscfps.TbscFPS|shouldRender
+      @|tbsc/tbscfps/TbscFPS.java|3241|3253|shouldRender|field|tbsc.tbscfps.TbscFPS|shouldRender
+   Method End: onKeyPressed(Lnet/minecraftforge/fml/common/gameevent/InputEvent$KeyInputEvent;)V
+Class End  : tbsc.tbscfps.TbscFPS
+endProcessing tbsc/tbscfps/TbscFPS.java
+
+processing tbsc/tbscfps/gui/config/GuiTFConfig.java
+@|tbsc/tbscfps/gui/config/GuiTFConfig.java|8|31|tbsc.tbscfps.gui.config|package|tbsc.tbscfps.gui.config|(file)
+Class Start: tbsc.tbscfps.gui.config.GuiTFConfig
+   Method Start: GuiTFConfig(Lnet/minecraft/client/gui/GuiScreen;)V
+      @|tbsc/tbscfps/gui/config/GuiTFConfig.java|329|340|GuiTFConfig|method|tbsc.tbscfps.gui.config.GuiTFConfig|GuiTFConfig|(Lnet/minecraft/client/gui/GuiScreen;)V
+      @|tbsc/tbscfps/gui/config/GuiTFConfig.java|341|350|GuiScreen|class|net.minecraft.client.gui.GuiScreen
+      @|tbsc/tbscfps/gui/config/GuiTFConfig.java|351|357|parent|param|tbsc.tbscfps.gui.config.GuiTFConfig|GuiTFConfig|(Lnet/minecraft/client/gui/GuiScreen;)V|parent|0
+      @|tbsc/tbscfps/gui/config/GuiTFConfig.java|375|381|parent|param|tbsc.tbscfps.gui.config.GuiTFConfig|GuiTFConfig|(Lnet/minecraft/client/gui/GuiScreen;)V|parent|0
+      @|tbsc/tbscfps/gui/config/GuiTFConfig.java|387|400|ConfigElement|class|net.minecraftforge.common.config.ConfigElement
+      @|tbsc/tbscfps/gui/config/GuiTFConfig.java|401|408|TbscFPS|class|tbsc.tbscfps.TbscFPS
+      @|tbsc/tbscfps/gui/config/GuiTFConfig.java|409|415|config|field|tbsc.tbscfps.TbscFPS|config
+      @|tbsc/tbscfps/gui/config/GuiTFConfig.java|416|427|getCategory|method|net.minecraftforge.common.config.Configuration|getCategory|(Ljava/lang/String;)Lnet/minecraftforge/common/config/ConfigCategory;
+      @|tbsc/tbscfps/gui/config/GuiTFConfig.java|428|441|Configuration|class|net.minecraftforge.common.config.Configuration
+      @|tbsc/tbscfps/gui/config/GuiTFConfig.java|442|458|CATEGORY_GENERAL|field|net.minecraftforge.common.config.Configuration|CATEGORY_GENERAL
+      @|tbsc/tbscfps/gui/config/GuiTFConfig.java|461|477|getChildElements|method|net.minecraftforge.fml.client.config.IConfigElement|getChildElements|()Ljava/util/List;
+      @|tbsc/tbscfps/gui/config/GuiTFConfig.java|497|504|TbscFPS|class|tbsc.tbscfps.TbscFPS
+      @|tbsc/tbscfps/gui/config/GuiTFConfig.java|505|510|MODID|field|tbsc.tbscfps.TbscFPS|MODID
+      @|tbsc/tbscfps/gui/config/GuiTFConfig.java|526|535|GuiConfig|class|net.minecraftforge.fml.client.config.GuiConfig
+      @|tbsc/tbscfps/gui/config/GuiTFConfig.java|536|557|getAbridgedConfigPath|method|net.minecraftforge.fml.client.config.GuiConfig|getAbridgedConfigPath|(Ljava/lang/String;)Ljava/lang/String;
+      @|tbsc/tbscfps/gui/config/GuiTFConfig.java|558|565|TbscFPS|class|tbsc.tbscfps.TbscFPS
+      @|tbsc/tbscfps/gui/config/GuiTFConfig.java|566|572|config|field|tbsc.tbscfps.TbscFPS|config
+      @|tbsc/tbscfps/gui/config/GuiTFConfig.java|573|581|toString|method|java.lang.Object|toString|()Ljava/lang/String;
+   Method End: GuiTFConfig(Lnet/minecraft/client/gui/GuiScreen;)V
+Class End  : tbsc.tbscfps.gui.config.GuiTFConfig
+endProcessing tbsc/tbscfps/gui/config/GuiTFConfig.java
+
+processing tbsc/tbscfps/gui/config/TFModGuiFactory.java
+@|tbsc/tbscfps/gui/config/TFModGuiFactory.java|8|31|tbsc.tbscfps.gui.config|package|tbsc.tbscfps.gui.config|(file)
+Class Start: tbsc.tbscfps.gui.config.TFModGuiFactory
+   Method Start: initialize(Lnet/minecraft/client/Minecraft;)V
+      @|tbsc/tbscfps/gui/config/TFModGuiFactory.java|281|291|initialize|method|net.minecraftforge.fml.client.IModGuiFactory|initialize|(Lnet/minecraft/client/Minecraft;)V
+      @|tbsc/tbscfps/gui/config/TFModGuiFactory.java|292|301|Minecraft|class|net.minecraft.client.Minecraft
+      @|tbsc/tbscfps/gui/config/TFModGuiFactory.java|302|319|minecraftInstance|param|tbsc.tbscfps.gui.config.TFModGuiFactory|initialize|(Lnet/minecraft/client/Minecraft;)V|minecraftInstance|0
+   Method End: initialize(Lnet/minecraft/client/Minecraft;)V
+   Method Start: mainConfigGuiClass()Ljava/lang/Class;
+      @|tbsc/tbscfps/gui/config/TFModGuiFactory.java|383|401|mainConfigGuiClass|method|net.minecraftforge.fml.client.IModGuiFactory|mainConfigGuiClass|()Ljava/lang/Class;
+      @|tbsc/tbscfps/gui/config/TFModGuiFactory.java|372|381|GuiScreen|class|net.minecraft.client.gui.GuiScreen
+      @|tbsc/tbscfps/gui/config/TFModGuiFactory.java|356|361|Class|class|java.lang.Class
+      @|tbsc/tbscfps/gui/config/TFModGuiFactory.java|421|432|GuiTFConfig|class|tbsc.tbscfps.gui.config.GuiTFConfig
+   Method End: mainConfigGuiClass()Ljava/lang/Class;
+   Method Start: runtimeGuiCategories()Ljava/util/Set;
+      @|tbsc/tbscfps/gui/config/TFModGuiFactory.java|521|541|runtimeGuiCategories|method|net.minecraftforge.fml.client.IModGuiFactory|runtimeGuiCategories|()Ljava/util/Set;
+      @|tbsc/tbscfps/gui/config/TFModGuiFactory.java|476|519|IModGuiFactory.RuntimeOptionCategoryElement|class|net.minecraftforge.fml.client.IModGuiFactory.RuntimeOptionCategoryElement
+      @|tbsc/tbscfps/gui/config/TFModGuiFactory.java|472|475|Set|class|java.util.Set
+   Method End: runtimeGuiCategories()Ljava/util/Set;
+   Method Start: getHandlerFor(Lnet/minecraftforge/fml/client/IModGuiFactory$RuntimeOptionCategoryElement;)Lnet/minecraftforge/fml/client/IModGuiFactory$RuntimeOptionGuiHandler;
+      @|tbsc/tbscfps/gui/config/TFModGuiFactory.java|623|636|getHandlerFor|method|net.minecraftforge.fml.client.IModGuiFactory|getHandlerFor|(Lnet/minecraftforge/fml/client/IModGuiFactory$RuntimeOptionCategoryElement;)Lnet/minecraftforge/fml/client/IModGuiFactory$RuntimeOptionGuiHandler;
+      @|tbsc/tbscfps/gui/config/TFModGuiFactory.java|599|622|RuntimeOptionGuiHandler|class|net.minecraftforge.fml.client.IModGuiFactory.RuntimeOptionGuiHandler
+      @|tbsc/tbscfps/gui/config/TFModGuiFactory.java|637|665|RuntimeOptionCategoryElement|class|net.minecraftforge.fml.client.IModGuiFactory.RuntimeOptionCategoryElement
+      @|tbsc/tbscfps/gui/config/TFModGuiFactory.java|666|673|element|param|tbsc.tbscfps.gui.config.TFModGuiFactory|getHandlerFor|(Lnet/minecraftforge/fml/client/IModGuiFactory$RuntimeOptionCategoryElement;)Lnet/minecraftforge/fml/client/IModGuiFactory$RuntimeOptionGuiHandler;|element|0
+   Method End: getHandlerFor(Lnet/minecraftforge/fml/client/IModGuiFactory$RuntimeOptionCategoryElement;)Lnet/minecraftforge/fml/client/IModGuiFactory$RuntimeOptionGuiHandler;
+Class End  : tbsc.tbscfps.gui.config.TFModGuiFactory
+endProcessing tbsc/tbscfps/gui/config/TFModGuiFactory.java
+
+processing tbsc/tbscfps/util/CounterPosition.java
+@|tbsc/tbscfps/util/CounterPosition.java|8|25|tbsc.tbscfps.util|package|tbsc.tbscfps.util|(file)
+Enum Start: tbsc.tbscfps.util.CounterPosition
+   @|tbsc/tbscfps/util/CounterPosition.java|75|90|CounterPosition|class|tbsc.tbscfps.util.CounterPosition
+   @|tbsc/tbscfps/util/CounterPosition.java|98|106|TOP_LEFT|field|tbsc.tbscfps.util.CounterPosition|TOP_LEFT
+   @|tbsc/tbscfps/util/CounterPosition.java|112|122|TOP_MIDDLE|field|tbsc.tbscfps.util.CounterPosition|TOP_MIDDLE
+   @|tbsc/tbscfps/util/CounterPosition.java|127|136|TOP_RIGHT|field|tbsc.tbscfps.util.CounterPosition|TOP_RIGHT
+   @|tbsc/tbscfps/util/CounterPosition.java|142|153|CENTER_LEFT|field|tbsc.tbscfps.util.CounterPosition|CENTER_LEFT
+   @|tbsc/tbscfps/util/CounterPosition.java|170|182|CENTER_RIGHT|field|tbsc.tbscfps.util.CounterPosition|CENTER_RIGHT
+   @|tbsc/tbscfps/util/CounterPosition.java|188|199|BOTTOM_LEFT|field|tbsc.tbscfps.util.CounterPosition|BOTTOM_LEFT
+   @|tbsc/tbscfps/util/CounterPosition.java|201|214|BOTTOM_MIDDLE|field|tbsc.tbscfps.util.CounterPosition|BOTTOM_MIDDLE
+   @|tbsc/tbscfps/util/CounterPosition.java|216|228|BOTTOM_RIGHT|field|tbsc.tbscfps.util.CounterPosition|BOTTOM_RIGHT
+   Method Start: opposite()Ltbsc/tbscfps/util/CounterPosition;
+      @|tbsc/tbscfps/util/CounterPosition.java|272|280|opposite|method|tbsc.tbscfps.util.CounterPosition|opposite|()Ltbsc/tbscfps/util/CounterPosition;
+      @|tbsc/tbscfps/util/CounterPosition.java|256|271|CounterPosition|class|tbsc.tbscfps.util.CounterPosition
+      @|tbsc/tbscfps/util/CounterPosition.java|305|313|TOP_LEFT|field|tbsc.tbscfps.util.CounterPosition|TOP_LEFT
+      @|tbsc/tbscfps/util/CounterPosition.java|322|334|BOTTOM_RIGHT|field|tbsc.tbscfps.util.CounterPosition|BOTTOM_RIGHT
+      @|tbsc/tbscfps/util/CounterPosition.java|356|366|TOP_MIDDLE|field|tbsc.tbscfps.util.CounterPosition|TOP_MIDDLE
+      @|tbsc/tbscfps/util/CounterPosition.java|375|387|BOTTOM_RIGHT|field|tbsc.tbscfps.util.CounterPosition|BOTTOM_RIGHT
+      @|tbsc/tbscfps/util/CounterPosition.java|409|418|TOP_RIGHT|field|tbsc.tbscfps.util.CounterPosition|TOP_RIGHT
+      @|tbsc/tbscfps/util/CounterPosition.java|427|438|BOTTOM_LEFT|field|tbsc.tbscfps.util.CounterPosition|BOTTOM_LEFT
+      @|tbsc/tbscfps/util/CounterPosition.java|460|472|CENTER_RIGHT|field|tbsc.tbscfps.util.CounterPosition|CENTER_RIGHT
+      @|tbsc/tbscfps/util/CounterPosition.java|481|492|CENTER_LEFT|field|tbsc.tbscfps.util.CounterPosition|CENTER_LEFT
+      @|tbsc/tbscfps/util/CounterPosition.java|515|527|BOTTOM_RIGHT|field|tbsc.tbscfps.util.CounterPosition|BOTTOM_RIGHT
+      @|tbsc/tbscfps/util/CounterPosition.java|536|544|TOP_LEFT|field|tbsc.tbscfps.util.CounterPosition|TOP_LEFT
+      @|tbsc/tbscfps/util/CounterPosition.java|566|579|BOTTOM_MIDDLE|field|tbsc.tbscfps.util.CounterPosition|BOTTOM_MIDDLE
+      @|tbsc/tbscfps/util/CounterPosition.java|588|598|TOP_MIDDLE|field|tbsc.tbscfps.util.CounterPosition|TOP_MIDDLE
+      @|tbsc/tbscfps/util/CounterPosition.java|620|631|BOTTOM_LEFT|field|tbsc.tbscfps.util.CounterPosition|BOTTOM_LEFT
+      @|tbsc/tbscfps/util/CounterPosition.java|640|649|TOP_RIGHT|field|tbsc.tbscfps.util.CounterPosition|TOP_RIGHT
+      @|tbsc/tbscfps/util/CounterPosition.java|671|682|CENTER_LEFT|field|tbsc.tbscfps.util.CounterPosition|CENTER_LEFT
+      @|tbsc/tbscfps/util/CounterPosition.java|691|703|CENTER_RIGHT|field|tbsc.tbscfps.util.CounterPosition|CENTER_RIGHT
+   Method End: opposite()Ltbsc/tbscfps/util/CounterPosition;
+Enum End  : tbsc.tbscfps.util.CounterPosition
+endProcessing tbsc/tbscfps/util/CounterPosition.java
+
+processing tbsc/tbscfps/util/PositionUtil.java
+@|tbsc/tbscfps/util/PositionUtil.java|8|25|tbsc.tbscfps.util|package|tbsc.tbscfps.util|(file)
+Class Start: tbsc.tbscfps.util.PositionUtil
+   Method Start: toPosition(Ljava/lang/String;)Ltbsc/tbscfps/util/CounterPosition;
+      @|tbsc/tbscfps/util/PositionUtil.java|140|150|toPosition|method|tbsc.tbscfps.util.PositionUtil|toPosition|(Ljava/lang/String;)Ltbsc/tbscfps/util/CounterPosition;
+      @|tbsc/tbscfps/util/PositionUtil.java|124|139|CounterPosition|class|tbsc.tbscfps.util.CounterPosition
+      @|tbsc/tbscfps/util/PositionUtil.java|151|157|String|class|java.lang.String
+      @|tbsc/tbscfps/util/PositionUtil.java|158|161|pos|param|tbsc.tbscfps.util.PositionUtil|toPosition|(Ljava/lang/String;)Ltbsc/tbscfps/util/CounterPosition;|pos|0
+      @|tbsc/tbscfps/util/PositionUtil.java|177|180|pos|param|tbsc.tbscfps.util.PositionUtil|toPosition|(Ljava/lang/String;)Ltbsc/tbscfps/util/CounterPosition;|pos|0
+      @|tbsc/tbscfps/util/PositionUtil.java|181|191|startsWith|method|java.lang.String|startsWith|(Ljava/lang/String;)Z
+      @|tbsc/tbscfps/util/PositionUtil.java|217|220|pos|param|tbsc.tbscfps.util.PositionUtil|toPosition|(Ljava/lang/String;)Ltbsc/tbscfps/util/CounterPosition;|pos|0
+      @|tbsc/tbscfps/util/PositionUtil.java|221|229|endsWith|method|java.lang.String|endsWith|(Ljava/lang/String;)Z
+      @|tbsc/tbscfps/util/PositionUtil.java|264|279|CounterPosition|class|tbsc.tbscfps.util.CounterPosition
+      @|tbsc/tbscfps/util/PositionUtil.java|280|288|TOP_LEFT|field|tbsc.tbscfps.util.CounterPosition|TOP_LEFT
+      @|tbsc/tbscfps/util/PositionUtil.java|320|323|pos|param|tbsc.tbscfps.util.PositionUtil|toPosition|(Ljava/lang/String;)Ltbsc/tbscfps/util/CounterPosition;|pos|0
+      @|tbsc/tbscfps/util/PositionUtil.java|324|332|endsWith|method|java.lang.String|endsWith|(Ljava/lang/String;)Z
+      @|tbsc/tbscfps/util/PositionUtil.java|369|384|CounterPosition|class|tbsc.tbscfps.util.CounterPosition
+      @|tbsc/tbscfps/util/PositionUtil.java|385|395|TOP_MIDDLE|field|tbsc.tbscfps.util.CounterPosition|TOP_MIDDLE
+      @|tbsc/tbscfps/util/PositionUtil.java|427|430|pos|param|tbsc.tbscfps.util.PositionUtil|toPosition|(Ljava/lang/String;)Ltbsc/tbscfps/util/CounterPosition;|pos|0
+      @|tbsc/tbscfps/util/PositionUtil.java|431|439|endsWith|method|java.lang.String|endsWith|(Ljava/lang/String;)Z
+      @|tbsc/tbscfps/util/PositionUtil.java|475|490|CounterPosition|class|tbsc.tbscfps.util.CounterPosition
+      @|tbsc/tbscfps/util/PositionUtil.java|491|500|TOP_RIGHT|field|tbsc.tbscfps.util.CounterPosition|TOP_RIGHT
+      @|tbsc/tbscfps/util/PositionUtil.java|538|541|pos|param|tbsc.tbscfps.util.PositionUtil|toPosition|(Ljava/lang/String;)Ltbsc/tbscfps/util/CounterPosition;|pos|0
+      @|tbsc/tbscfps/util/PositionUtil.java|542|552|startsWith|method|java.lang.String|startsWith|(Ljava/lang/String;)Z
+      @|tbsc/tbscfps/util/PositionUtil.java|582|585|pos|param|tbsc.tbscfps.util.PositionUtil|toPosition|(Ljava/lang/String;)Ltbsc/tbscfps/util/CounterPosition;|pos|0
+      @|tbsc/tbscfps/util/PositionUtil.java|586|594|endsWith|method|java.lang.String|endsWith|(Ljava/lang/String;)Z
+      @|tbsc/tbscfps/util/PositionUtil.java|629|644|CounterPosition|class|tbsc.tbscfps.util.CounterPosition
+      @|tbsc/tbscfps/util/PositionUtil.java|645|656|CENTER_LEFT|field|tbsc.tbscfps.util.CounterPosition|CENTER_LEFT
+      @|tbsc/tbscfps/util/PositionUtil.java|688|691|pos|param|tbsc.tbscfps.util.PositionUtil|toPosition|(Ljava/lang/String;)Ltbsc/tbscfps/util/CounterPosition;|pos|0
+      @|tbsc/tbscfps/util/PositionUtil.java|692|700|endsWith|method|java.lang.String|endsWith|(Ljava/lang/String;)Z
+      @|tbsc/tbscfps/util/PositionUtil.java|736|751|CounterPosition|class|tbsc.tbscfps.util.CounterPosition
+      @|tbsc/tbscfps/util/PositionUtil.java|752|764|CENTER_RIGHT|field|tbsc.tbscfps.util.CounterPosition|CENTER_RIGHT
+      @|tbsc/tbscfps/util/PositionUtil.java|802|805|pos|param|tbsc.tbscfps.util.PositionUtil|toPosition|(Ljava/lang/String;)Ltbsc/tbscfps/util/CounterPosition;|pos|0
+      @|tbsc/tbscfps/util/PositionUtil.java|806|816|startsWith|method|java.lang.String|startsWith|(Ljava/lang/String;)Z
+      @|tbsc/tbscfps/util/PositionUtil.java|844|847|pos|param|tbsc.tbscfps.util.PositionUtil|toPosition|(Ljava/lang/String;)Ltbsc/tbscfps/util/CounterPosition;|pos|0
+      @|tbsc/tbscfps/util/PositionUtil.java|848|856|endsWith|method|java.lang.String|endsWith|(Ljava/lang/String;)Z
+      @|tbsc/tbscfps/util/PositionUtil.java|891|906|CounterPosition|class|tbsc.tbscfps.util.CounterPosition
+      @|tbsc/tbscfps/util/PositionUtil.java|907|918|BOTTOM_LEFT|field|tbsc.tbscfps.util.CounterPosition|BOTTOM_LEFT
+      @|tbsc/tbscfps/util/PositionUtil.java|950|953|pos|param|tbsc.tbscfps.util.PositionUtil|toPosition|(Ljava/lang/String;)Ltbsc/tbscfps/util/CounterPosition;|pos|0
+      @|tbsc/tbscfps/util/PositionUtil.java|954|962|endsWith|method|java.lang.String|endsWith|(Ljava/lang/String;)Z
+      @|tbsc/tbscfps/util/PositionUtil.java|999|1014|CounterPosition|class|tbsc.tbscfps.util.CounterPosition
+      @|tbsc/tbscfps/util/PositionUtil.java|1015|1028|BOTTOM_MIDDLE|field|tbsc.tbscfps.util.CounterPosition|BOTTOM_MIDDLE
+      @|tbsc/tbscfps/util/PositionUtil.java|1060|1063|pos|param|tbsc.tbscfps.util.PositionUtil|toPosition|(Ljava/lang/String;)Ltbsc/tbscfps/util/CounterPosition;|pos|0
+      @|tbsc/tbscfps/util/PositionUtil.java|1064|1072|endsWith|method|java.lang.String|endsWith|(Ljava/lang/String;)Z
+      @|tbsc/tbscfps/util/PositionUtil.java|1108|1123|CounterPosition|class|tbsc.tbscfps.util.CounterPosition
+      @|tbsc/tbscfps/util/PositionUtil.java|1124|1136|BOTTOM_RIGHT|field|tbsc.tbscfps.util.CounterPosition|BOTTOM_RIGHT
+   Method End: toPosition(Ljava/lang/String;)Ltbsc/tbscfps/util/CounterPosition;
+Class End  : tbsc.tbscfps.util.PositionUtil
+endProcessing tbsc/tbscfps/util/PositionUtil.java
+
