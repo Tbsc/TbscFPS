@@ -1,13 +1,12 @@
 package tbsc.tbscfps;
 
+import jline.internal.Log;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.settings.KeyBinding;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.config.Configuration;
-import net.minecraftforge.common.config.Property;
 import net.minecraftforge.fml.client.event.ConfigChangedEvent;
 import net.minecraftforge.fml.client.registry.ClientRegistry;
-import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.FMLLog;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
@@ -19,11 +18,14 @@ import org.lwjgl.input.Keyboard;
 import tbsc.tbscfps.util.CounterPosition;
 import tbsc.tbscfps.util.PositionUtil;
 
+import java.awt.*;
+import java.util.regex.Pattern;
+
 @Mod(modid = TbscFPS.MODID, version = TbscFPS.VERSION, guiFactory = TbscFPS.GUI_FACTORY)
 public class TbscFPS {
 
     public static final String MODID = "TbscFPS";
-    public static final String VERSION = "2.1";
+    public static final String VERSION = "2.2";
     public static final String GUI_FACTORY = "tbsc.tbscfps.gui.config.TFModGuiFactory";
 
     public static KeyBinding keyToggle;
@@ -31,19 +33,21 @@ public class TbscFPS {
     public static Configuration config;
 
     public static CounterPosition pos = CounterPosition.TOP_LEFT;
+    public static int counterColorCode = 0xFF0000;
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
         if (event.getSide() == Side.SERVER) {
             FMLLog.bigWarning("CLIENT-SIDE MOD INSTALLED ON SERVER. REMOVE FROM SERVER.");
-            FMLLog.bigWarning("You are lucky I am adding a safety-check, or you'll crash.");
             return;
         }
+
         mc = Minecraft.getMinecraft();
+
         keyToggle = new KeyBinding("Toggle FPS Counter", Keyboard.KEY_G, "TbscFPS");
         ClientRegistry.registerKeyBinding(keyToggle);
-        config = new Configuration(event.getSuggestedConfigurationFile());
-        syncConfig();
+
+        loadConfig(event);
     }
 
     @Mod.EventHandler
@@ -51,27 +55,39 @@ public class TbscFPS {
         MinecraftForge.EVENT_BUS.register(new FPSRenderEventHandler());
     }
 
+    private void loadConfig(FMLPreInitializationEvent event) {
+        config = new Configuration(event.getSuggestedConfigurationFile());
+        MinecraftForge.EVENT_BUS.register(this);
+
+        syncConfig();
+    }
+
     public static void syncConfig() {
         try {
-            // Load config
-            config.load();
-
-            // Read props from config
-            Property counterPos = config.get(Configuration.CATEGORY_GENERAL, "FPS Counter Position", "topLeft", "Values accepted: " +
-                    "topLeft, topMiddle, topRight, centerRight, downRight, downMiddle, downLeft, centerLeft.");
-            String posString = counterPos.getString();
-            pos = PositionUtil.toPosition(posString);
+            processConfig();
         } catch (Exception e) {
-            // Exception
+            Log.error(MODID + " has a problem loading its configuration!");
+            e.printStackTrace();
         } finally {
-            // Save props to config
-            if (config.hasChanged()) config.save();
+            if(config.hasChanged()) {
+                config.save();
+            }
         }
+    }
+
+    private static void processConfig() {
+        pos = PositionUtil.toPosition(config.get(Configuration.CATEGORY_GENERAL, "fpsCounterPosition", "topLeft",
+                "Position of the FPS counter on screen", CounterPosition.positionValues()).getString());
+        counterColorCode = Color.decode(config.get(Configuration.CATEGORY_GENERAL, "fpsCounterColor",
+                "#FF0000", "Hex color code for the FPS counter", Pattern.compile("^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$",
+                        Pattern.CASE_INSENSITIVE)).getString()).getRGB();
     }
 
     @SubscribeEvent
     public void onConfigChanged(ConfigChangedEvent.OnConfigChangedEvent event) {
-        syncConfig();
+        if (event.modID.equals(MODID)) {
+            syncConfig();
+        }
     }
 
     public static boolean shouldRender = true;

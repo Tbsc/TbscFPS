@@ -22,4 +22,12 @@ public enum CounterPosition {
         return null;
     }
 
+    public static String[] positionValues() {
+        return new String[] {
+            "topLeft",     "topMiddle",   "topRight",
+            "centerLeft",                 "centerRight",
+            "bottomLeft", "bottomMiddle", "bottomRight"
+        };
+    }
+
 }

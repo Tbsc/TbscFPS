@@ -10,8 +10,6 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import org.lwjgl.opengl.GL11;
 import tbsc.tbscfps.util.CounterPosition;
 
-import java.lang.reflect.Field;
-
 public class FPSRenderEventHandler extends Gui {
 
     private Minecraft mc = Minecraft.getMinecraft();
@@ -46,38 +44,38 @@ public class FPSRenderEventHandler extends Gui {
 
         int fpsCount = Minecraft.getDebugFPS();
         if (TbscFPS.pos == CounterPosition.TOP_LEFT) {
-            this.drawString(mc.fontRendererObj, String.valueOf(fpsCount), xPosLeft, yPosTop, 0xff0000);
+            this.drawString(mc.fontRendererObj, String.valueOf(fpsCount), xPosLeft, yPosTop, TbscFPS.counterColorCode);
             return;
         }
         if (TbscFPS.pos == CounterPosition.TOP_MIDDLE) {
-            this.drawString(mc.fontRendererObj, String.valueOf(fpsCount), xPosCenter, yPosTop, 0xff0000);
+            this.drawString(mc.fontRendererObj, String.valueOf(fpsCount), xPosCenter, yPosTop, TbscFPS.counterColorCode);
             return;
         }
         if (TbscFPS.pos == CounterPosition.TOP_RIGHT) {
-            this.drawString(mc.fontRendererObj, String.valueOf(fpsCount), xPosRight, yPosTop, 0xff0000);
+            this.drawString(mc.fontRendererObj, String.valueOf(fpsCount), xPosRight, yPosTop, TbscFPS.counterColorCode);
             return;
         }
         if (TbscFPS.pos == CounterPosition.CENTER_RIGHT) {
-            this.drawString(mc.fontRendererObj, String.valueOf(fpsCount), xPosRight, yPosCenter, 0xff0000);
+            this.drawString(mc.fontRendererObj, String.valueOf(fpsCount), xPosRight, yPosCenter, TbscFPS.counterColorCode);
             return;
         }
         if (TbscFPS.pos == CounterPosition.BOTTOM_RIGHT) {
-            this.drawString(mc.fontRendererObj, String.valueOf(fpsCount), xPosRight, yPosDown, 0xff0000);
+            this.drawString(mc.fontRendererObj, String.valueOf(fpsCount), xPosRight, yPosDown, TbscFPS.counterColorCode);
             return;
         }
         if (TbscFPS.pos == CounterPosition.BOTTOM_MIDDLE) {
-            this.drawString(mc.fontRendererObj, String.valueOf(fpsCount), xPosCenter, yPosDown, 0xff0000);
+            this.drawString(mc.fontRendererObj, String.valueOf(fpsCount), xPosCenter, yPosDown, TbscFPS.counterColorCode);
             return;
         }
         if (TbscFPS.pos == CounterPosition.BOTTOM_LEFT) {
-            this.drawString(mc.fontRendererObj, String.valueOf(fpsCount), xPosLeft, yPosDown, 0xff0000);
+            this.drawString(mc.fontRendererObj, String.valueOf(fpsCount), xPosLeft, yPosDown, TbscFPS.counterColorCode);
             return;
         }
         if (TbscFPS.pos == CounterPosition.CENTER_LEFT) {
-            this.drawString(mc.fontRendererObj, String.valueOf(fpsCount), xPosLeft, yPosCenter, 0xff0000);
+            this.drawString(mc.fontRendererObj, String.valueOf(fpsCount), xPosLeft, yPosCenter, TbscFPS.counterColorCode);
             return;
         }
-        this.drawString(mc.fontRendererObj, String.valueOf("?"), xPosLeft, yPosTop, 0xff0000);
+        this.drawString(mc.fontRendererObj, String.valueOf("?"), xPosLeft, yPosTop, TbscFPS.counterColorCode);
     }
 
 }
