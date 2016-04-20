@@ -10,7 +10,7 @@ public class GuiTFConfig extends GuiConfig {
 
     public GuiTFConfig(GuiScreen parent) {
         super(parent, new ConfigElement(TbscFPS.config.getCategory(Configuration.CATEGORY_GENERAL)).getChildElements(),
-                TbscFPS.MODID, false, false, GuiConfig.getAbridgedConfigPath(TbscFPS.config.toString()));
+                TbscFPS.MODID, TbscFPS.MODID, false, false, GuiConfig.getAbridgedConfigPath(TbscFPS.config.toString()));
     }
 
 }
