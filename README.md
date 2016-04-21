@@ -1,7 +1,7 @@
 # TbscFPS
-Simple FPS counter, that some coding later, and now it's fully configurable (at least what you need to configure)
-I made it since I needed one and I couldn't find any, so there you go!
+My (kinda) simple FPS counter.
 
-Enjoy!
+**Version *2.1* will be the last version for 1.7.10.**
+**I might port it if someone requests me to, but if no one does, than no updates.**
 
-P.S. Pull requests are welcomed.
+Has some configurability with changing position and color.
