@@ -1,0 +1,6 @@
+{
+  "key.tbscfps.toggle": "Toggle FPS Counter",
+  "key.tbscfps.rotate": "Rotate counter position clockwise",
+
+  "keycat.tbscfps": "TbscFPS"
+}
