@@ -1,20 +1,20 @@
 package tbsc.fps;
 
-import com.mojang.blaze3d.matrix.MatrixStack;
+import com.mojang.blaze3d.vertex.PoseStack;
+import net.minecraft.client.KeyMapping;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.gui.FontRenderer;
-import net.minecraft.client.settings.KeyBinding;
+import net.minecraft.client.gui.Font;
 import net.minecraftforge.client.event.InputEvent;
 import net.minecraftforge.client.event.RenderGameOverlayEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.client.registry.ClientRegistry;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.common.ObfuscationReflectionHelper;
-import net.minecraftforge.fml.config.ModConfig;
+import net.minecraftforge.fml.event.config.ModConfigEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fml.loading.FMLPaths;
+import net.minecraftforge.fml.util.ObfuscationReflectionHelper;
+import net.minecraftforge.fmlclient.registry.ClientRegistry;
 import org.lwjgl.glfw.GLFW;
 
 import java.awt.*;
@@ -22,8 +22,8 @@ import java.lang.reflect.Field;
 
 @Mod("tbscfps")
 public class TbscFPS {
-    public static KeyBinding keyToggle = new KeyBinding("key.tbscfps.toggle", GLFW.GLFW_KEY_UNKNOWN, "keycat.tbscfps");
-    public static KeyBinding keyRotate = new KeyBinding("key.tbscfps.rotate", GLFW.GLFW_KEY_UNKNOWN, "keycat.tbscfps");
+    public static KeyMapping keyToggle = new KeyMapping("key.tbscfps.toggle", GLFW.GLFW_KEY_UNKNOWN, "keycat.tbscfps");
+    public static KeyMapping keyRotate = new KeyMapping("key.tbscfps.rotate", GLFW.GLFW_KEY_UNKNOWN, "keycat.tbscfps");
 
     public static CounterPosition pos = CounterPosition.TOP_LEFT;
     public static int counterColorCode = 0xFF0000;
@@ -43,10 +43,8 @@ public class TbscFPS {
         processConfig();
     }
 
-    public void onConfigReloaded(ModConfig.ModConfigEvent event) {
-        if (event instanceof ModConfig.Reloading) {
-            processConfig();
-        }
+    public void onConfigReloaded(ModConfigEvent event) {
+        processConfig();
     }
 
     private static void processConfig() {
@@ -70,12 +68,12 @@ public class TbscFPS {
 
     @SubscribeEvent
     public void onRenderGameOverlay(RenderGameOverlayEvent event) {
-        if (event.getType() != RenderGameOverlayEvent.ElementType.TEXT || !TbscFPS.shouldRender) {
+        if (event.getType() != RenderGameOverlayEvent.ElementType.TEXT || !TbscFPS.shouldRender || Minecraft.getInstance().options.renderDebug) {
             return;
         }
 
         // obfuscation of fps static field in Minecraft
-        String fpsCount = String.valueOf(this.<Integer>reflGetField("field_71470_ab"));
+        String fpsCount = String.valueOf(this.<Integer>reflGetField("f_91021_"));
         int color = TbscFPS.counterColorCode;
 
         int charCount = fpsCount.length();
@@ -95,35 +93,19 @@ public class TbscFPS {
         }
 
         switch (TbscFPS.pos) {
-            case TOP_LEFT:
-                this.drawString(fpsCount, xPosLeft, yPosTop, color);
-                break;
-            case TOP_MIDDLE:
-                this.drawString(fpsCount, xPosCenter, yPosTop, color);
-                break;
-            case TOP_RIGHT:
-                this.drawString(fpsCount, xPosRight, yPosTop, color);
-                break;
-            case CENTER_RIGHT:
-                this.drawString(fpsCount, xPosRight, yPosCenter, color);
-                break;
-            case BOTTOM_RIGHT:
-                this.drawString(fpsCount, xPosRight, yPosDown, color);
-                break;
-            case BOTTOM_MIDDLE:
-                this.drawString(fpsCount, xPosCenter, yPosDown, color);
-                break;
-            case BOTTOM_LEFT:
-                this.drawString(fpsCount, xPosLeft, yPosDown, color);
-                break;
-            case CENTER_LEFT:
-                this.drawString(fpsCount, xPosLeft, yPosCenter, color);
-                break;
+            case TOP_LEFT -> this.drawString(fpsCount, xPosLeft, yPosTop, color);
+            case TOP_MIDDLE -> this.drawString(fpsCount, xPosCenter, yPosTop, color);
+            case TOP_RIGHT -> this.drawString(fpsCount, xPosRight, yPosTop, color);
+            case CENTER_RIGHT -> this.drawString(fpsCount, xPosRight, yPosCenter, color);
+            case BOTTOM_RIGHT -> this.drawString(fpsCount, xPosRight, yPosDown, color);
+            case BOTTOM_MIDDLE -> this.drawString(fpsCount, xPosCenter, yPosDown, color);
+            case BOTTOM_LEFT -> this.drawString(fpsCount, xPosLeft, yPosDown, color);
+            case CENTER_LEFT -> this.drawString(fpsCount, xPosLeft, yPosCenter, color);
         }
     }
 
-    private FontRenderer fontRenderer;
-    private final MatrixStack stack = new MatrixStack();
+    private Font fontRenderer;
+    private final PoseStack stack = new PoseStack();
 
     private void drawString(String text, float x, float y, int color) {
         if (fontRenderer != null) {
