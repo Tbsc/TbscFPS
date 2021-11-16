@@ -1,69 +1,91 @@
 package tbsc.fps;
 
-import com.mojang.blaze3d.matrix.MatrixStack;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.FontRenderer;
 import net.minecraft.client.settings.KeyBinding;
-import net.minecraftforge.client.event.InputEvent;
 import net.minecraftforge.client.event.RenderGameOverlayEvent;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.common.config.Configuration;
+import net.minecraftforge.fml.client.event.ConfigChangedEvent;
 import net.minecraftforge.fml.client.registry.ClientRegistry;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.ObfuscationReflectionHelper;
-import net.minecraftforge.fml.config.ModConfig;
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraftforge.fml.loading.FMLPaths;
-import org.lwjgl.glfw.GLFW;
+import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.gameevent.InputEvent;
+import org.jline.utils.Log;
+import org.lwjgl.input.Keyboard;
 
 import java.awt.*;
 import java.lang.reflect.Field;
+import java.util.regex.Pattern;
 
-@Mod("tbscfps")
+@Mod(modid = TbscFPS.MODID, clientSideOnly = true)
 public class TbscFPS {
-    public static KeyBinding keyToggle = new KeyBinding("key.tbscfps.toggle", GLFW.GLFW_KEY_UNKNOWN, "keycat.tbscfps");
-    public static KeyBinding keyRotate = new KeyBinding("key.tbscfps.rotate", GLFW.GLFW_KEY_UNKNOWN, "keycat.tbscfps");
+    public static final String MODID = "tbscfps";
 
+    public static KeyBinding keyToggle = new KeyBinding("key.tbscfps.toggle", Keyboard.KEY_NONE, "keycat.tbscfps");
+    public static KeyBinding keyRotate = new KeyBinding("key.tbscfps.rotate", Keyboard.KEY_NONE, "keycat.tbscfps");
+
+    public static final String POS_CONF_KEY = "counterPosition";
     public static CounterPosition pos = CounterPosition.TOP_LEFT;
+    public static final String COLOR_CONF_KEY = "fpsCounterColor";
     public static int counterColorCode = 0xFF0000;
+    public static Configuration config;
 
-    public TbscFPS() {
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::clientPreInit);
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::onConfigReloaded);
-
-        MinecraftForge.EVENT_BUS.register(this);
-    }
-
-    public void clientPreInit(final FMLClientSetupEvent event) {
+    @Mod.EventHandler
+    public void preInit(FMLPreInitializationEvent event) {
         ClientRegistry.registerKeyBinding(keyToggle);
         ClientRegistry.registerKeyBinding(keyRotate);
 
-        Config.loadConfig(Config.CONFIG_SPEC, FMLPaths.CONFIGDIR.get().resolve("tbscfps.toml"));
-        processConfig();
+        MinecraftForge.EVENT_BUS.register(this);
+
+        config = new Configuration(event.getSuggestedConfigurationFile());
+        syncConfig();
     }
 
-    public void onConfigReloaded(ModConfig.ModConfigEvent event) {
-        if (event instanceof ModConfig.Reloading) {
+    public static void syncConfig() {
+        try {
+            processConfig();
+        } catch (Exception e) {
+            Log.error("TbscFPS has a problem loading its configuration!");
+            e.printStackTrace();
+        } finally {
+            if (config.hasChanged()) {
+                config.save();
+            }
+        }
+    }
+
+    @SubscribeEvent
+    public void onConfigChanged(ConfigChangedEvent.OnConfigChangedEvent event) {
+        if (event.getModID().equals(MODID)) {
             processConfig();
         }
     }
 
     private static void processConfig() {
-        pos = Config.POSITION.get();
-        counterColorCode = Color.decode(Config.COUNTER_COLOR.get()).getRGB();
+        pos = CounterPosition.valueOf(config.get(Configuration.CATEGORY_GENERAL, POS_CONF_KEY,
+                CounterPosition.TOP_LEFT.name(),
+                "Position of the FPS counter on screen " +
+                        "(possible values: TOP_LEFT, TOP_MIDDLE, TOP_RIGHT, CENTER_RIGHT, BOTTOM_RIGHT, BOTTOM_MIDDLE, BOTTOM_LEFT, CENTER_LEFT)",
+                CounterPosition.names()).getString());
+        counterColorCode = Color.decode(config.get(Configuration.CATEGORY_GENERAL, COLOR_CONF_KEY,
+                "#FF0000", "Hex color code for the FPS counter", Pattern.compile("^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$",
+                        Pattern.CASE_INSENSITIVE)).getString()).getRGB();
     }
 
     public static boolean shouldRender = true;
 
     @SubscribeEvent
     public void onKeyPressed(InputEvent.KeyInputEvent event) {
-        if (TbscFPS.keyToggle.isDown()) {
+        if (TbscFPS.keyToggle.isPressed()) {
             shouldRender = !shouldRender;
         }
 
-        if (TbscFPS.keyRotate.isDown()) {
-            Config.POSITION.set(CounterPosition.values()[(pos.ordinal() + 1) % CounterPosition.values().length]);
+        if (TbscFPS.keyRotate.isPressed()) {
+            config.get(Configuration.CATEGORY_GENERAL, POS_CONF_KEY, "")
+                    .set(CounterPosition.values()[(pos.ordinal() + 1) % CounterPosition.values().length].name());
             processConfig();
         }
     }
@@ -75,13 +97,13 @@ public class TbscFPS {
         }
 
         // obfuscation of fps static field in Minecraft
-        String fpsCount = String.valueOf(this.<Integer>reflGetField("field_71470_ab"));
+        String fpsCount = String.valueOf(Minecraft.getDebugFPS());
         int color = TbscFPS.counterColorCode;
 
         int charCount = fpsCount.length();
 
-        int width = event.getWindow().getGuiScaledWidth();
-        int height = event.getWindow().getGuiScaledHeight();
+        int width = event.getResolution().getScaledWidth();
+        int height = event.getResolution().getScaledHeight();
 
         int yPosTop = 4;
         int xPosLeft = 4;
@@ -91,7 +113,7 @@ public class TbscFPS {
         int yPosCenter = height / 2 - 4;
 
         if (fontRenderer == null) {
-            fontRenderer = Minecraft.getInstance().font;
+            fontRenderer = Minecraft.getMinecraft().fontRenderer;
         }
 
         switch (TbscFPS.pos) {
@@ -123,11 +145,10 @@ public class TbscFPS {
     }
 
     private FontRenderer fontRenderer;
-    private final MatrixStack stack = new MatrixStack();
 
-    private void drawString(String text, float x, float y, int color) {
+    private void drawString(String text, int x, int y, int color) {
         if (fontRenderer != null) {
-            fontRenderer.draw(stack, text, x, y, color);
+            fontRenderer.drawString(text, x, y, color);
         }
     }
 
