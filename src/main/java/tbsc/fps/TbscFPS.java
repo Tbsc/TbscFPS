@@ -92,7 +92,7 @@ public class TbscFPS {
 
     @SubscribeEvent
     public void onRenderGameOverlay(RenderGameOverlayEvent event) {
-        if (event.getType() != RenderGameOverlayEvent.ElementType.TEXT || !TbscFPS.shouldRender) {
+        if (event.getType() != RenderGameOverlayEvent.ElementType.TEXT || !TbscFPS.shouldRender || Minecraft.getMinecraft().gameSettings.showDebugInfo) {
             return;
         }
 
